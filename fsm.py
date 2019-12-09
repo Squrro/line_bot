@@ -34,7 +34,7 @@ class TocMachine(GraphMachine):
 
         reply_token = event.reply_token
         send_text_message(reply_token, "Trigger state2")
-        self.is_going_to_state3()
+        "self.go_back()
 
     def on_exit_state2(self):
         print("Leaving state2")
