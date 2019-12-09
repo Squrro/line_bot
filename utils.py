@@ -14,10 +14,15 @@ def send_text_message(reply_token, text):
     return "OK"
 
 
-"""
-def send_image_url(id, img_url):
-    pass
 
+def send_image_url(id, img_url):
+    line_bot_api = LineBotApi(channel_access_token)
+    message = ImageSendMessage{
+        original_content_url = img_url
+        preview_image_url = img_url
+    }
+    line_bot_api.reply_message(reply_token, message)
+"""
 def send_button_message(id, text, buttons):
     pass
 """
