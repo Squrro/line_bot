@@ -41,7 +41,6 @@ class TocMachine(GraphMachine):
 
         reply_token = event.reply_token
         send_image_url(reply_token,'https://scontent.fkhh1-2.fna.fbcdn.net/v/t1.0-9/24774761_2250793221613519_5707360604129341045_n.jpg?_nc_cat=110&_nc_ohc=XXR8yABVBrAAQmD2cWtOwOh10YT_Uw_b3Oig9cNICaHeuWmUnENvKUa9Q&_nc_ht=scontent.fkhh1-2.fna&oh=238042de7aabf3b7b4d12a5e6b1d4672&oe=5E6FCCEE')
-        send_text_message(reply_token, "Shut up!")
         self.go_back()
 
     def on_exit_state3(self):
