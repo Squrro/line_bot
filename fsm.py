@@ -10,15 +10,15 @@ class TocMachine(GraphMachine):
 
     def is_going_to_state1(self, event):
         text = event.message.text
-        return text.lower() == "哈囉"
+        return text == "哈囉"
 
     def is_going_to_state2(self, event):
         text = event.message.text
-        return text.lower() == "作者"
+        return text == "作者"
 
     def is_going_to_state3(self, event):
         text = event.message.text
-        return text.lower() == "照片"
+        return text == "照片"
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
