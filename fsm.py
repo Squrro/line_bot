@@ -10,15 +10,15 @@ class TocMachine(GraphMachine):
 
     def is_going_to_state1(self, event):
         text = event.message.text
-        return text.lower() == "go to state1"
+        return text.lower() == "哈囉"
 
     def is_going_to_state2(self, event):
         text = event.message.text
-        return text.lower() == "go to state2"
+        return text.lower() == "作者""
 
     def is_going_to_state3(self, event):
         text = event.message.text
-        return text.lower() == "go to state3"
+        return text.lower() == "照片"
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
@@ -32,11 +32,10 @@ class TocMachine(GraphMachine):
     def on_enter_state2(self, event):
         print("I'm entering state2")
         reply_token = event.reply_token
-        send_text_message(reply_token, "不要去state3")     
+        send_text_message(reply_token, "不要看照片,回頭好嘛QQ")     
 
     def on_enter_state3(self, event):
         print("I'm entering state3")
-
         reply_token = event.reply_token
         send_image_url(reply_token,'https://scontent.fkhh1-2.fna.fbcdn.net/v/t1.0-9/24774761_2250793221613519_5707360604129341045_n.jpg?_nc_cat=110&_nc_ohc=XXR8yABVBrAAQmD2cWtOwOh10YT_Uw_b3Oig9cNICaHeuWmUnENvKUa9Q&_nc_ht=scontent.fkhh1-2.fna&oh=238042de7aabf3b7b4d12a5e6b1d4672&oe=5E6FCCEE')
         self.go_back()
