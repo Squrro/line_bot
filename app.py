@@ -57,7 +57,7 @@ if channel_secret is None:
 if channel_access_token is None:
     print("Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.")
     sys.exit(1)
-
+show_fsm()
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
