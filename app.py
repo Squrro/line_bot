@@ -57,6 +57,7 @@ if channel_secret is None:
 if channel_access_token is None:
     print("Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.")
     sys.exit(1)
+
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
@@ -113,7 +114,7 @@ def webhook_handler():
         print(f"REQUEST BODY: \n{body}")
         response = machine.advance(event)
         if response == False:
-            send_text_message(event.reply_token, "蛤~~你說啥")
+            send_text_message(event.reply_token, "Not Entering any State")
 
     return "OK"
 
