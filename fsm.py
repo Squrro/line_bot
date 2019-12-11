@@ -32,7 +32,7 @@ class TocMachine(GraphMachine):
     def on_enter_state2(self, event):
         print("I'm entering state2")
         reply_token = event.reply_token
-        send_text_message(reply_token, "不要去state3回頭好嘛QQ")     
+        send_text_message(reply_token, "不要去state3 回頭好媽")     
 
     def on_enter_state3(self, event):
         print("I'm entering state3")
