@@ -10,7 +10,7 @@ class TocMachine(GraphMachine):
 
     def is_going_to_state1(self, event):
         text = event.message.text
-        return text == "哈囉"
+        return text.lower() == "哈囉"
 
     def is_going_to_state2(self, event):
         text = event.message.text
@@ -22,7 +22,6 @@ class TocMachine(GraphMachine):
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
-
         reply_token = event.reply_token
         send_text_message(reply_token, "你好>//<")
         self.go_back()
